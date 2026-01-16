@@ -1,0 +1,13 @@
+
+(library
+ (name joltage)
+ (modules joltage)           
+ (libraries base hardcaml)
+ (preprocess (pps ppx_hardcaml ppx_jane)))
+
+
+(executable
+ (name joltage_tb)
+ (modules joltage_tb)        
+ (libraries base hardcaml stdio joltage)
+ (preprocess (pps ppx_hardcaml ppx_jane)))
